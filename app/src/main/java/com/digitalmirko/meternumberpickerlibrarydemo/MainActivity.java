@@ -10,6 +10,7 @@ import com.alexzaitsev.meternumberpicker.MeterView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Top and Bottom Meters
     MeterView meterNumberPicker, meterNumberPickerTwo;
 
     @Override
@@ -17,15 +18,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Top Meter
         meterNumberPicker = (MeterView) findViewById(R.id.meterView);
         meterNumberPicker.setValue(123450);
 
+        // Bottom Meter
         meterNumberPickerTwo = (MeterView) findViewById(R.id.meterViewTwo);
         meterNumberPickerTwo.setValue(43210);
 
+        // Top Toast Mark Button
         Button button = (Button)findViewById(R.id.button);
+
+        // Bottom Toast Mark Button
         Button button2 = (Button)findViewById(R.id.button2);
 
+        // Top Toast Mark Button Clicked
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Bottom Toast Mark Button Clicked
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
